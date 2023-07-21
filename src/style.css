@@ -84,8 +84,24 @@ body {
     box-sizing: border-box;
     width: 70vw;
     min-width: 300px;
-    overflow-y: scroll;
-    
+    overflow-y: scroll;   
+}
+
+.add-note-button {
+    background-color: rgb(74, 153, 74);
+    width: 100px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.05s ease-in;
+}
+
+.add-note-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 @media (max-width: 1100px) {
