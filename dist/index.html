@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.bundle.js" defer></script>
+    <script src="dom.bundle.js" defer></script>
+    <script src="notes.bundle.js" defer></script>
     <title>Document</title>
 
     <!-- Fonts -->
@@ -33,47 +35,27 @@
         </div>
 
         <div class="contents" id="contents-id">
-            <button class="add-note-button">New Note</button>
+            <button class="add-note-button" id="new-note-btn">New Note</button>
+        </div>
+    </div>
 
-            <div class="main-note active">
-                <div class="upper-note">
-                    <input type="checkbox">
-                    <div class="bolded">The Awesome title of my note</div>
-                </div>
-                <div class="lower-note">
-                    <div>A longer and more elaborate description. Foo bar lorem ipsum var mitter. Was haben mir ihn einen?</div>
-                    <div class="note-attributes">
-                        <div>
-                            <div class="bolded">Due Date:</div>
-                            <div>Oct. 6 2023</div>
-                        </div>
-                        <div>
-                            <div class="bolded">Priority:</div>
-                            <div>Important</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="new-task-overlay hide" id="new-task-overlay-id">
+        <div class="new-task">
+            <h2 class="title">Create a new task</h2>
+            <form class="form-center">
+                <input type="text" name="title" id = "title" class="input-field" placeholder="Title" required>
 
-            <div class="main-note">
-                <div class="upper-note active">
-                    <input type="checkbox">
-                    <div class="bolded">The Awesome title of my note</div>
-                </div>
-                <div class="lower-note hide">
-                    <div>A longer and more elaborate description. Foo bar lorem ipsum var mitter. Was haben mir ihn einen?</div>
-                    <div class="note-attributes">
-                        <div>
-                            <div class="bolded">Due Date:</div>
-                            <div>Oct. 6 2023</div>
-                        </div>
-                        <div>
-                            <div class="bolded">Priority:</div>
-                            <div>Important</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <input type="text" name="description" id="description" class="input-field" placeholder="Description">
+
+                <input type="date" name="date" id="date" class="input-field" required>
+
+                <label for="importance" class="task-label">Task Importance</label>
+                <input type="range" name="importance" id="importance" class="input-field" min="0" max="10">
+
+                <input type="submit" class="add-note-button task-label" value="Add Note" id="add-note-button">
+            </form>
+
+            <input type="submit" class="cancel-button" value="Cancel" id="cancel-note-form">
         </div>
     </div>
 </body>

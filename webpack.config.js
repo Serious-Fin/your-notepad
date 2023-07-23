@@ -3,7 +3,9 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        index: './src/index.js'
+        index: './src/index.js',
+        dom: './src/dom.js',
+        notes: './src/notes.js'
     },
     output: {
         filename: '[name].bundle.js',
